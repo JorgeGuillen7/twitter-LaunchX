@@ -5,8 +5,12 @@ class UserService {
 		return new User(id, username, name, 'Sin bio');
 	}
 
-	static getInfo(User) {
-		return Object.values(User);
+	static getInfo(user) {
+		return Object.values(user);
+	}
+
+	static updateUserUsername(user, newUsername) {
+		user.username = newUsername;
 	}
 }
 

@@ -19,4 +19,11 @@ describe('Unit Test for UserService class', () => {
 		expect(userInfoInList[2]).toBe('Cristiano Ronaldo');
 		expect(userInfoInList[3]).toBe('Sin bio');
 	});
+
+	test('3) Update Username', () => {
+		const userUno = UserService.create(1, 'CR7', 'Cristiano Ronaldo');
+		UserService.updateUserUsername(userUno, 'ElComandante');
+
+		expect(userUno.username).toBe('ElComandante');
+	});
 });
