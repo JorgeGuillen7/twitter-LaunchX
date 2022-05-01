@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/JorgeGuillen7/twitter-LaunchX/issues"
   },
-  "homepage": "https://github.com/JorgeGuillen7/twitter-LaunchX#readme"
+  "homepage": "https://github.com/JorgeGuillen7/twitter-LaunchX#readme",
+  "devDependencies": {
+    "jest": "^28.0.3"
+  }
 }
