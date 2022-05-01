@@ -18,4 +18,20 @@ describe('Unit tests for User class', () => {
 		expect(cristianoRonaldo.dateCreated).not.toBeUndefined();
 		expect(cristianoRonaldo.lastUpdated).not.toBeUndefined();
 	});
+
+	test('2) Add getters', () => {
+		const cristianoRonaldo = new User(
+			1,
+			'CR7',
+			'Cristiano Ronaldo',
+			'Futbolista profesional del Manchester United'
+		);
+
+		expect(cristianoRonaldo.getUsername).toBe('CR7');
+		expect(cristianoRonaldo.getBio).toBe(
+			'Futbolista profesional del Manchester United'
+		);
+		expect(cristianoRonaldo.getDateCreated).not.toBeUndefined();
+		expect(cristianoRonaldo.getLastUpdated).not.toBeUndefined();
+	});
 });
