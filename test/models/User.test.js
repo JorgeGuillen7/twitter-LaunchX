@@ -6,9 +6,7 @@ describe('Unit tests for User class', () => {
 			1,
 			'CR7',
 			'Cristiano Ronaldo',
-			'Futbolista profesional del Manchester United',
-			'01 / 05 / 2022',
-			'01 / 05 / 2022'
+			'Futbolista profesional del Manchester United'
 		);
 
 		expect(cristianoRonaldo.id).toBe(1);
@@ -17,7 +15,7 @@ describe('Unit tests for User class', () => {
 		expect(cristianoRonaldo.bio).toBe(
 			'Futbolista profesional del Manchester United'
 		);
-		expect(cristianoRonaldo.dateCreated).toBe('01 / 05 / 2022');
-		expect(cristianoRonaldo.lastUpdated).toBe('01 / 05 / 2022');
+		expect(cristianoRonaldo.dateCreated).not.toBeUndefined();
+		expect(cristianoRonaldo.lastUpdated).not.toBeUndefined();
 	});
 });
