@@ -9,4 +9,14 @@ describe('Unit Test for UserService class', () => {
 		expect(user.name).toBe('Cristiano Ronaldo');
 		expect(user.bio).not.toBeUndefined();
 	});
+
+	test('2) Get all user data in a list', () => {
+		const userUno = UserService.create(1, 'CR7', 'Cristiano Ronaldo');
+		const userInfoInList = UserService.getInfo(userUno);
+
+		expect(userInfoInList[0]).toBe(1);
+		expect(userInfoInList[1]).toBe('CR7');
+		expect(userInfoInList[2]).toBe('Cristiano Ronaldo');
+		expect(userInfoInList[3]).toBe('Sin bio');
+	});
 });
