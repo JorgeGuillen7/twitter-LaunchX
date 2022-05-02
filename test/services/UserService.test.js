@@ -26,4 +26,22 @@ describe('Unit Test for UserService class', () => {
 
 		expect(userUno.username).toBe('ElComandante');
 	});
+
+	test('4) Given a list of users give me the list of usernames', () => {
+		const user1 = UserService.create(1, 'username1', 'Nombre1');
+		const user2 = UserService.create(2, 'username2', 'Nombre2');
+		const user3 = UserService.create(3, 'username3', 'Nombre3');
+		const user4 = UserService.create(4, 'username4', 'Nombre4');
+		const getUsernames = UserService.getAllUsernames([
+			user1,
+			user2,
+			user3,
+			user4,
+		]);
+
+		expect(getUsernames).toContain('username1');
+		expect(getUsernames).toContain('username2');
+		expect(getUsernames).toContain('username3');
+		expect(getUsernames).toContain('username4');
+	});
 });
