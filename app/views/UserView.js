@@ -1,4 +1,4 @@
-const UserService = require('./../models/User');
+const UserService = require('./../services/UserService');
 
 class UserView {
 	static createUser(payload) {
@@ -10,6 +10,20 @@ class UserView {
 			payload.id === null
 		) {
 			return { error: 'Necesitan tener un valor válido' };
+		} else if (
+			typeof payload.username === 'string' &&
+			typeof payload.id === 'number' &&
+			typeof payload.name === 'string'
+		) {
+			return UserService.create(
+				payload.id,
+				payload.username,
+				payload.name
+			);
+		} else {
+			return {
+				error: 'Las propiedades del payload necesitan tener un valor válido',
+			};
 		}
 	}
 }
