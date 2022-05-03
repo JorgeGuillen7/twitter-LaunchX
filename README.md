@@ -67,3 +67,9 @@ Crea una clase llamada `UserView` que servirá para interactuar con el modelo
     `necesitan tener un valor válido`.
 -   **Requerimiento 4:** Verifica que se pueda crear un objeto `User`, al enviar
     un payload con las siguientes propiedades: `username`, `id` y `name`.
+    
+---
+
+> Proyecto desarrollado con la guía y el asesoramiento del mission commander
+> [@carlogilmar](https://github.com/carlogilmar) para el programa de Formación
+> de Developers de **_Launch X by Innovacción Virtual_**.
